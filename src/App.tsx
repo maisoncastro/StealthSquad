@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import "./App.css";
 
 function App() {
@@ -16,6 +17,18 @@ function App() {
     const numbers = "0123456789";
     const symbols = "!@#$%^&*()_-+=<>?/|{}[]~";
 
+    // Toast is not options are selected
+    // const errorToast = () => {
+    //   if (
+    //     !includeUppercase &&
+    //     !includeLowercase &&
+    //     !includeNumbers &&
+    //     !includeSymbols
+    //   ) {
+    //     return <Toast error="Please select at least one option." />;
+    //   }
+    // };
+
     let allowedChars = "";
     let generatedPassword = "";
 
@@ -25,7 +38,7 @@ function App() {
     if (includeSymbols) allowedChars += symbols;
 
     if (!allowedChars) {
-      setErrorMessage("Please select at least one option.");
+      toast.error("Please select at least one option.");
       setPassword("");
       return;
     }
