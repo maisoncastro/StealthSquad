@@ -56,7 +56,7 @@ function App() {
   return (
     <div className="flex justify-center items-center h-[500px] w-[100%]">
       <div className="flex flex-col	justify-around gap-[10px] items-start">
-        <h1>Password Generator</h1>
+        <h1>StealthSquad</h1>
         <label>
           <input
             type="checkbox"
