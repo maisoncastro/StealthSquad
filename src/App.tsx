@@ -54,52 +54,54 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Password Generator</h1>
-      <label>
-        <input
-          type="checkbox"
-          checked={includeUppercase}
-          onChange={() => setIncludeUppercase(!includeUppercase)}
-        />
-        Include uppercase
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          checked={includeLowercase}
-          onChange={() => setIncludeLowercase(!includeLowercase)}
-        />
-        Include lowercase
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          checked={includeNumbers}
-          onChange={() => setIncludeNumbers(!includeNumbers)}
-        />
-        Include numbers
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          checked={includeSymbols}
-          onChange={() => setIncludeSymbols(!includeSymbols)}
-        />
-        Include symbols
-      </label>
-      <div>
-        <label>Password length: {length}</label>
-        <input
-          type="range"
-          min="5"
-          max="32"
-          value={length}
-          onChange={(e) => setLength(parseInt(e.target.value))}
-        />
+    <div className="flex justify-center items-center h-[500px] w-[100%]">
+      <div className="flex flex-col	justify-around gap-[10px] items-start">
+        <h1>Password Generator</h1>
+        <label>
+          <input
+            type="checkbox"
+            checked={includeUppercase}
+            onChange={() => setIncludeUppercase(!includeUppercase)}
+          />
+          Include uppercase
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={includeLowercase}
+            onChange={() => setIncludeLowercase(!includeLowercase)}
+          />
+          Include lowercase
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={includeNumbers}
+            onChange={() => setIncludeNumbers(!includeNumbers)}
+          />
+          Include numbers
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={includeSymbols}
+            onChange={() => setIncludeSymbols(!includeSymbols)}
+          />
+          Include symbols
+        </label>
+        <div>
+          <label>Password length: {length}</label>
+          <input
+            type="range"
+            min="5"
+            max="32"
+            value={length}
+            onChange={(e) => setLength(parseInt(e.target.value))}
+          />
+        </div>
+        <button onClick={generatePassword}>Click to Generate</button>
+        <p>{password}</p>
       </div>
-      <button onClick={generatePassword}>Click to Generate</button>
-      <p>{password}</p>
     </div>
   );
 }
