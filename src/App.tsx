@@ -1,6 +1,7 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import "./App.css";
+import StaggeredAnimation from "./components/StaggeredAnimation";
 
 function App() {
   const [includeUppercase, setIncludeUppercase] = useState(false);
@@ -16,18 +17,6 @@ function App() {
     const lowercase = "abcdefghijklmnopqrstuvwxyz";
     const numbers = "0123456789";
     const symbols = "!@#$%^&*()_-+=<>?/|{}[]~";
-
-    // Toast is not options are selected
-    // const errorToast = () => {
-    //   if (
-    //     !includeUppercase &&
-    //     !includeLowercase &&
-    //     !includeNumbers &&
-    //     !includeSymbols
-    //   ) {
-    //     return <Toast error="Please select at least one option." />;
-    //   }
-    // };
 
     let allowedChars = "";
     let generatedPassword = "";
@@ -55,7 +44,8 @@ function App() {
 
   return (
     <div className="flex justify-center items-center h-[500px] w-[100%]">
-      <div className="flex flex-col	justify-around gap-[10px] items-start">
+      <StaggeredAnimation />
+      <div className="flex flex-col	justify-around gap-[10px] items-start border-solid border-2 border-indigo-600 p-10 rounded-xl">
         <h1>StealthSquad</h1>
         <label>
           <input
