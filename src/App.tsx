@@ -44,7 +44,6 @@ function App() {
 
   return (
     <div className="flex flex-col justify-center items-center h-[100%] w-[100%]">
-      {/* <StaggeredAnimation /> */}
       <span className="flex flex-row text-4xl mb-4">
         <img src="./logo-neon.svg" alt="logo" />
         <h1 className="p-5 font-semibold">StealthSquad</h1>
