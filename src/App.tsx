@@ -50,40 +50,42 @@ function App() {
         <h1 className="p-5 font-semibold">StealthSquad</h1>
       </span>
 
-      <div className="flex flex-col	justify-around gap-[10px] items-start border-solid border-[1.5px] border-slate-400 p-10 rounded-xl h-[630px] w-[408px] drop-shadow-[0px_0px_44px_-1px_rgba(255,255,255,0.05)]">
-        <label className="flex flex-row justify-between items-center w-full">
-          Include uppercase
-          <input
-            type="checkbox"
-            checked={includeUppercase}
-            onChange={() => setIncludeUppercase(!includeUppercase)}
-          />
-        </label>
-        <label className="flex flex-row justify-between items-center w-full">
-          Include lowercase
-          <input
-            type="checkbox"
-            checked={includeLowercase}
-            onChange={() => setIncludeLowercase(!includeLowercase)}
-          />
-        </label>
-        <label className="flex flex-row justify-between items-center w-full">
-          Include numbers
-          <input
-            type="checkbox"
-            checked={includeNumbers}
-            onChange={() => setIncludeNumbers(!includeNumbers)}
-          />
-        </label>
-        <label className="flex flex-row justify-between items-center w-full">
-          Include symbols
-          <input
-            type="checkbox"
-            checked={includeSymbols}
-            onChange={() => setIncludeSymbols(!includeSymbols)}
-          />
-        </label>
-        <div className="flex flex-col w-full">
+      <div className="flex flex-col	justify-around gap-[10px] items-start border-solid border-[1.5px] border-slate-400 p-8 rounded-xl h-[630px] w-[408px] drop-shadow-[0px_0px_44px_-1px_rgba(255,255,255,0.05)]">
+        <div className="flex flex-col justify-around gap-[19px] items-center w-full">
+          <label className="flex flex-row justify-between items-center w-full h-[53px] bg-[#434343] rounded-lg px-4">
+            Include uppercase
+            <input
+              type="checkbox"
+              checked={includeUppercase}
+              onChange={() => setIncludeUppercase(!includeUppercase)}
+            />
+          </label>
+          <label className="flex flex-row justify-between  items-center w-full px-4 bg-[#434343] rounded-lg h-[53px]">
+            Include lowercase
+            <input
+              type="checkbox"
+              checked={includeLowercase}
+              onChange={() => setIncludeLowercase(!includeLowercase)}
+            />
+          </label>
+          <label className="flex flex-row justify-between items-center w-full px-4 h-[53px] bg-[#434343] rounded-lg">
+            Include numbers
+            <input
+              type="checkbox"
+              checked={includeNumbers}
+              onChange={() => setIncludeNumbers(!includeNumbers)}
+            />
+          </label>
+          <label className="flex flex-row justify-between items-center w-full px-4 bg-[#434343] rounded-lg h-[53px]">
+            Include symbols
+            <input
+              type="checkbox"
+              checked={includeSymbols}
+              onChange={() => setIncludeSymbols(!includeSymbols)}
+            />
+          </label>
+        </div>
+        <div className="flex flex-col w-full px-4">
           <label className="mb-4">Password length: {length}</label>
           <input
             type="range"
