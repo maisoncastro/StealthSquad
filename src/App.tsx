@@ -43,48 +43,48 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-[500px] w-[100%]">
+    <div className="flex flex-col justify-center items-center h-[100%] w-[100%]">
       {/* <StaggeredAnimation /> */}
-      <span className="flex flex-row text-4xl ">
+      <span className="flex flex-row text-4xl mb-4">
         <img src="./logo-neon.svg" alt="logo" />
         <h1 className="p-5 font-semibold">StealthSquad</h1>
       </span>
 
-      <div className="flex flex-col	justify-around gap-[10px] items-start border-solid border-2 border-indigo-600 p-10 rounded-xl">
-        <label>
+      <div className="flex flex-col	justify-around gap-[10px] items-start border-solid border-[1.5px] border-slate-400 p-10 rounded-xl h-[630px] w-[408px] drop-shadow-[0px_0px_44px_-1px_rgba(255,255,255,0.05)]">
+        <label className="flex flex-row justify-between items-center w-full">
+          Include uppercase
           <input
             type="checkbox"
             checked={includeUppercase}
             onChange={() => setIncludeUppercase(!includeUppercase)}
           />
-          Include uppercase
         </label>
-        <label>
+        <label className="flex flex-row justify-between items-center w-full">
+          Include lowercase
           <input
             type="checkbox"
             checked={includeLowercase}
             onChange={() => setIncludeLowercase(!includeLowercase)}
           />
-          Include lowercase
         </label>
-        <label>
+        <label className="flex flex-row justify-between items-center w-full">
+          Include numbers
           <input
             type="checkbox"
             checked={includeNumbers}
             onChange={() => setIncludeNumbers(!includeNumbers)}
           />
-          Include numbers
         </label>
-        <label>
+        <label className="flex flex-row justify-between items-center w-full">
+          Include symbols
           <input
             type="checkbox"
             checked={includeSymbols}
             onChange={() => setIncludeSymbols(!includeSymbols)}
           />
-          Include symbols
         </label>
-        <div>
-          <label>Password length: {length}</label>
+        <div className="flex flex-col w-full">
+          <label className="mb-4">Password length: {length}</label>
           <input
             type="range"
             min="5"
@@ -93,8 +93,19 @@ function App() {
             onChange={(e) => setLength(parseInt(e.target.value))}
           />
         </div>
-        <button onClick={generatePassword}>Click to Generate</button>
-        <p>{password}</p>
+        <div className="flex items-center justify-center w-full">
+          <button
+            className="flex items-center justify-center w-[212px] bg-[#9DFF50] text-[#262626] p-4 rounded-md text-sm"
+            onClick={generatePassword}
+          >
+            Generate Password
+          </button>
+        </div>
+        <div className="flex items-center justify-center w-full">
+          <div className="flex items-center justify-center w-full h-[35px] bg-[#999999] text-[#9DFF50] p-4 rounded-md text-sm">
+            {password}
+          </div>
+        </div>
       </div>
     </div>
   );
