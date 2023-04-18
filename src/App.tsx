@@ -66,7 +66,7 @@ function App() {
                 aria-hidden="true"
                 className={`${
                   includeUppercase ? "translate-x-7" : "translate-x-0"
-                }
+                } ${includeUppercase ? "bg-[#9dff50]" : "bg-white"}
         pointer-events-none inline-block h-[18px] w-[18px] transform bg-white rounded-full shadow-lg ring-0 transition duration-200 ease-in-out`}
               />
             </Switch>
@@ -84,7 +84,7 @@ function App() {
                 aria-hidden="true"
                 className={`${
                   includeLowercase ? "translate-x-7" : "translate-x-0"
-                }
+                } ${includeLowercase ? "bg-[#9dff50]" : "bg-white"}
           pointer-events-none inline-block h-[18px] w-[18px] transform bg-white rounded-full shadow-lg ring-0 transition duration-200 ease-in-out`}
               />
             </Switch>
@@ -104,6 +104,7 @@ function App() {
                 className={`${
                   includeNumbers ? "translate-x-7" : "translate-x-0"
                 }
+                ${includeNumbers ? "bg-[#9dff50]" : "bg-white"}
           pointer-events-none inline-block h-[18px] w-[18px] transform bg-white rounded-full shadow-lg ring-0 transition duration-200 ease-in-out`}
               />
             </Switch>
@@ -115,6 +116,7 @@ function App() {
               checked={includeSymbols}
               onChange={setIncludeSymbols}
               className={`${includeSymbols ? "bg-[#929292]" : "bg-[#929292]"}
+              
         relative inline-flex items-center h-[18px] w-[51px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
             >
               <span className="sr-only">Use setting</span>
@@ -122,7 +124,7 @@ function App() {
                 aria-hidden="true"
                 className={`${
                   includeSymbols ? "translate-x-7" : "translate-x-0"
-                }
+                } ${includeSymbols ? "bg-[#9dff50]" : "bg-white"}
           pointer-events-none inline-block h-[18px] w-[18px] transform bg-white rounded-full shadow-lg ring-0 transition duration-200 ease-in-out`}
               />
             </Switch>
@@ -140,8 +142,21 @@ function App() {
         </div>
         <div className="flex items-center justify-center w-full">
           <button
-            className="flex items-center justify-center w-[212px] bg-[#9DFF50] hover:bg-[#242424] text-[#262626] hover:text-[#fff] p-4 rounded-md text-sm hover:border-slate-400 transition duration-300 "
+            className={`flex items-center justify-center w-[212px] p-4 rounded-md text-sm transition duration-200 ${
+              !includeUppercase &&
+              !includeLowercase &&
+              !includeNumbers &&
+              !includeSymbols
+                ? "bg-[#999999] text-[#fff] cursor-not-allowed"
+                : "bg-[#9DFF50] hover:opacity-60 text-[#262626]"
+            }`}
             onClick={generatePassword}
+            disabled={
+              !includeUppercase &&
+              !includeLowercase &&
+              !includeNumbers &&
+              !includeSymbols
+            }
           >
             Generate Password
           </button>
