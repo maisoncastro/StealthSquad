@@ -51,7 +51,7 @@ function App() {
         <h1 className="p-5 font-semibold">StealthSquad</h1>
       </span>
 
-      <div className="main-card flex flex-col	justify-around gap-[10px] items-start border-solid border-[1.5px] bg-[#242424] border-slate-400 p-8 rounded-xl h-[630px] w-[408px] ">
+      <div className="main-card flex flex-col	justify-around gap-[10px] items-start border-solid border-[1.5px] bg-[#242424] border-slate-400 p-8 rounded-xl h-[630px] w-[350px] sm:w-[408px] ">
         <div className="flex flex-col justify-around gap-[19px] items-center w-full">
           <label className="flex flex-row justify-between items-center w-full h-[53px] bg-[#434343] rounded-lg px-4">
             Include uppercase
