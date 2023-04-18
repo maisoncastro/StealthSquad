@@ -1,5 +1,6 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { Switch } from "@headlessui/react";
 import "./App.css";
 // import StaggeredAnimation from "./components/StaggeredAnimation";
 
@@ -54,35 +55,77 @@ function App() {
         <div className="flex flex-col justify-around gap-[19px] items-center w-full">
           <label className="flex flex-row justify-between items-center w-full h-[53px] bg-[#434343] rounded-lg px-4">
             Include uppercase
-            <input
-              type="checkbox"
+            <Switch
               checked={includeUppercase}
-              onChange={() => setIncludeUppercase(!includeUppercase)}
-            />
-          </label>
-          <label className="flex flex-row justify-between  items-center w-full px-4 bg-[#434343] rounded-lg h-[53px]">
-            Include lowercase
-            <input
-              type="checkbox"
-              checked={includeLowercase}
-              onChange={() => setIncludeLowercase(!includeLowercase)}
-            />
-          </label>
-          <label className="flex flex-row justify-between items-center w-full px-4 h-[53px] bg-[#434343] rounded-lg">
-            Include numbers
-            <input
-              type="checkbox"
-              checked={includeNumbers}
-              onChange={() => setIncludeNumbers(!includeNumbers)}
-            />
+              onChange={setIncludeUppercase}
+              className={`${includeUppercase ? "bg-[#929292]" : "bg-[#929292]"}
+      relative inline-flex items-center h-[18px] w-[50px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+            >
+              <span className="sr-only">Use setting</span>
+              <span
+                aria-hidden="true"
+                className={`${
+                  includeUppercase ? "translate-x-7" : "translate-x-0"
+                }
+        pointer-events-none inline-block h-[18px] w-[18px] transform bg-white rounded-full shadow-lg ring-0 transition duration-200 ease-in-out`}
+              />
+            </Switch>
           </label>
           <label className="flex flex-row justify-between items-center w-full px-4 bg-[#434343] rounded-lg h-[53px]">
+            Include lowercase
+            <Switch
+              checked={includeLowercase}
+              onChange={setIncludeLowercase}
+              className={`${includeLowercase ? "bg-[#929292]" : "bg-[#929292]"}
+        relative inline-flex items-center h-[18px] w-[51px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+            >
+              <span className="sr-only">Use setting</span>
+              <span
+                aria-hidden="true"
+                className={`${
+                  includeLowercase ? "translate-x-7" : "translate-x-0"
+                }
+          pointer-events-none inline-block h-[18px] w-[18px] transform bg-white rounded-full shadow-lg ring-0 transition duration-200 ease-in-out`}
+              />
+            </Switch>
+          </label>
+
+          <label className="flex flex-row justify-between items-center w-full px-4 h-[53px] bg-[#434343] rounded-lg">
+            Include numbers
+            <Switch
+              checked={includeNumbers}
+              onChange={setIncludeNumbers}
+              className={`${includeNumbers ? "bg-[#929292]" : "bg-[#929292]"}
+        relative inline-flex items-center h-[18px] w-[51px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+            >
+              <span className="sr-only">Use setting</span>
+              <span
+                aria-hidden="true"
+                className={`${
+                  includeNumbers ? "translate-x-7" : "translate-x-0"
+                }
+          pointer-events-none inline-block h-[18px] w-[18px] transform bg-white rounded-full shadow-lg ring-0 transition duration-200 ease-in-out`}
+              />
+            </Switch>
+          </label>
+
+          <label className="flex flex-row justify-between items-center w-full px-4 bg-[#434343] rounded-lg h-[53px]">
             Include symbols
-            <input
-              type="checkbox"
+            <Switch
               checked={includeSymbols}
-              onChange={() => setIncludeSymbols(!includeSymbols)}
-            />
+              onChange={setIncludeSymbols}
+              className={`${includeSymbols ? "bg-[#929292]" : "bg-[#929292]"}
+        relative inline-flex items-center h-[18px] w-[51px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+            >
+              <span className="sr-only">Use setting</span>
+              <span
+                aria-hidden="true"
+                className={`${
+                  includeSymbols ? "translate-x-7" : "translate-x-0"
+                }
+          pointer-events-none inline-block h-[18px] w-[18px] transform bg-white rounded-full shadow-lg ring-0 transition duration-200 ease-in-out`}
+              />
+            </Switch>
           </label>
         </div>
         <div className="flex flex-col w-full px-4">
