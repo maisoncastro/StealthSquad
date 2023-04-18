@@ -20,6 +20,10 @@ button {
   color: red;
 }
 
+.main-card {
+  box-shadow: 0px 0px 44px -1px rgba(255, 255, 255, 0.05);
+}
+
 /* Slider */
 
 input[type="range"] {
@@ -57,6 +61,11 @@ input[type="range"]::-moz-range-thumb {
   background-color: #9dff50;
   border-radius: 50%;
   cursor: pointer;
+}
+
+/* Main Card */
+
+.main-card {
 }
 
 /* Anime.JS */

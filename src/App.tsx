@@ -50,7 +50,7 @@ function App() {
         <h1 className="p-5 font-semibold">StealthSquad</h1>
       </span>
 
-      <div className="flex flex-col	justify-around gap-[10px] items-start border-solid border-[1.5px] border-slate-400 p-8 rounded-xl h-[630px] w-[408px] drop-shadow-[0px_0px_44px_-1px_rgba(255,255,255,0.05)]">
+      <div className="main-card flex flex-col	justify-around gap-[10px] items-start border-solid border-[1.5px] bg-[#242424] border-slate-400 p-8 rounded-xl h-[630px] w-[408px] ">
         <div className="flex flex-col justify-around gap-[19px] items-center w-full">
           <label className="flex flex-row justify-between items-center w-full h-[53px] bg-[#434343] rounded-lg px-4">
             Include uppercase
@@ -97,7 +97,7 @@ function App() {
         </div>
         <div className="flex items-center justify-center w-full">
           <button
-            className="flex items-center justify-center w-[212px] bg-[#9DFF50] text-[#262626] p-4 rounded-md text-sm"
+            className="flex items-center justify-center w-[212px] bg-[#9DFF50] hover:bg-[#242424] text-[#262626] hover:text-[#fff] p-4 rounded-md text-sm hover:border-slate-400 transition duration-300 "
             onClick={generatePassword}
           >
             Generate Password
@@ -105,7 +105,7 @@ function App() {
         </div>
         <div className="flex items-center justify-center w-full">
           <div className="flex items-center justify-center w-full h-[35px] bg-[#999999] text-[#9DFF50] p-4 rounded-md text-sm">
-            {password}
+            {password ? password : "Click on Generate!"}
           </div>
         </div>
       </div>
