@@ -3,6 +3,10 @@
   padding: 2rem;
 }
 
+h1 {
+  font-family: JetBrains Mono, monospace;
+}
+
 .error {
   color: red;
 }

@@ -43,10 +43,14 @@ function App() {
   };
 
   return (
-    <div className="flex justify-center items-center h-[500px] w-[100%]">
+    <div className="flex flex-col justify-center items-center h-[500px] w-[100%]">
       {/* <StaggeredAnimation /> */}
+      <span className="flex flex-row text-4xl ">
+        <img src="./logo-neon.svg" alt="logo" />
+        <h1 className="p-5 font-semibold">StealthSquad</h1>
+      </span>
+
       <div className="flex flex-col	justify-around gap-[10px] items-start border-solid border-2 border-indigo-600 p-10 rounded-xl">
-        <h1>StealthSquad</h1>
         <label>
           <input
             type="checkbox"
