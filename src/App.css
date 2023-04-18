@@ -16,6 +16,10 @@ button {
   font-family: JetBrains Mono, monospace !important;
 }
 
+.please {
+  font-family: JetBrains Mono, monospace;
+}
+
 .error {
   color: red;
 }
