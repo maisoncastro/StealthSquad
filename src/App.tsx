@@ -1,7 +1,7 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import "./App.css";
-import StaggeredAnimation from "./components/StaggeredAnimation";
+// import StaggeredAnimation from "./components/StaggeredAnimation";
 
 function App() {
   const [includeUppercase, setIncludeUppercase] = useState(false);
@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div className="flex justify-center items-center h-[500px] w-[100%]">
-      <StaggeredAnimation />
+      {/* <StaggeredAnimation /> */}
       <div className="flex flex-col	justify-around gap-[10px] items-start border-solid border-2 border-indigo-600 p-10 rounded-xl">
         <h1>StealthSquad</h1>
         <label>

@@ -3,20 +3,17 @@ import anime from "animejs";
 
 const StaggeredAnimation = () => {
   useEffect(() => {
-    function fitElementToParent(
-      el: string | object | HTMLElement | SVGElement | NodeList | null,
-      padding: number
-    ) {
-      var timeout: number | null | undefined = null;
+    function fitElementToParent(el: HTMLElement, padding: number) {
+      let timeout: number | null | undefined = null;
       function resize() {
         if (timeout) clearTimeout(timeout);
         anime.set(el, { scale: 1 });
-        var pad = padding || 0;
-        var parentEl = el.parentNode;
-        var elOffsetWidth = el.offsetWidth - pad;
-        var parentOffsetWidth = parentEl.offsetWidth;
-        var ratio = parentOffsetWidth / elOffsetWidth;
-        timeout = setTimeout(anime.set(el, { scale: ratio }), 10);
+        const pad = padding || 0;
+        const parentEl = el.parentNode as HTMLElement;
+        const elOffsetWidth = el.offsetWidth - pad;
+        const parentOffsetWidth = parentEl.offsetWidth;
+        const ratio = parentOffsetWidth / elOffsetWidth;
+        timeout = setTimeout(() => anime.set(el, { scale: ratio }), 10);
       }
       resize();
       window.addEventListener("resize", resize);
