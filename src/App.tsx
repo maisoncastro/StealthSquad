@@ -2,7 +2,6 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { Switch } from "@headlessui/react";
 import "./App.css";
-// import StaggeredAnimation from "./components/StaggeredAnimation";
 
 function App() {
   const [includeUppercase, setIncludeUppercase] = useState(false);
