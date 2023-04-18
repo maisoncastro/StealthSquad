@@ -2,7 +2,7 @@
 
 A simple, yet powerful password generator built with Vite, Tailwind CSS, Headless UI, and deployed on Vercel.
 
-[![Stealth Squad Password Generator Screenshot](./screenshot.png)](https://stealth-squad.vercel.app/)
+[![Stealth Squad Password Generator Screenshot](./public/screenshot.png)](https://stealth-squad.vercel.app/)
 
 Visit the live demo: [https://stealth-squad.vercel.app/](https://stealth-squad.vercel.app/)
 
